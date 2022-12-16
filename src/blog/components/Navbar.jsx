@@ -40,7 +40,7 @@ export const Navbar = () => {
                       <a href="category.html">Pages</a>
                       <ul className="dropdown">
                         <li>
-                          <a href="search-result.html">Search Result</a>
+                          <a href="blog.html">Search Result</a>
                         </li>
                         <li>
                           <a href="blog.html">Blog</a>

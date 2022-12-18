@@ -1,48 +1,48 @@
 export const Footer = () => {
   return (
-    <footer class="site-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="widget">
-              <h3 class="mb-4">About</h3>
+    <footer className='site-footer'>
+      <div className='container'>
+        <div className='row'>
+          <div className='col-lg-4'>
+            <div className='widget'>
+              <h3 className='mb-4'>About</h3>
               <p>
                 Far far away, behind the word mountains, far from the countries
                 Vokalia and Consonantia, there live the blind texts.
               </p>
             </div>
             {/* <!-- /.widget --> */}
-            <div class="widget">
+            <div className='widget'>
               <h3>Social</h3>
-              <ul class="list-unstyled social">
+              <ul className='list-unstyled social'>
                 <li>
-                  <a href="#">
-                    <span class="icon-instagram"></span>
+                  <a href='#'>
+                    <span className='icon-instagram'></span>
                   </a>
                 </li>
-                <li className="ms-1">
-                  <a href="#">
-                    <span class="icon-twitter"></span>
+                <li className='ms-1'>
+                  <a href='#'>
+                    <span className='icon-twitter'></span>
                   </a>
                 </li>
-                <li className="ms-1">
-                  <a href="#">
-                    <span class="icon-facebook"></span>
+                <li className='ms-1'>
+                  <a href='#'>
+                    <span className='icon-facebook'></span>
                   </a>
                 </li>
-                <li className="ms-1">
-                  <a href="#">
-                    <span class="icon-linkedin"></span>
+                <li className='ms-1'>
+                  <a href='#'>
+                    <span className='icon-linkedin'></span>
                   </a>
                 </li>
-                <li className="ms-1">
-                  <a href="#">
-                    <span class="icon-pinterest"></span>
+                <li className='ms-1'>
+                  <a href='#'>
+                    <span className='icon-pinterest'></span>
                   </a>
                 </li>
-                <li className="ms-1">
-                  <a href="#">
-                    <span class="icon-dribbble"></span>
+                <li className='ms-1'>
+                  <a href='#'>
+                    <span className='icon-dribbble'></span>
                   </a>
                 </li>
               </ul>
@@ -50,108 +50,108 @@ export const Footer = () => {
             {/* <!-- /.widget --> */}
           </div>
           {/* <!-- /.col-lg-4 --> */}
-          <div class="col-lg-4 ps-lg-5">
-            <div class="widget">
-              <h3 class="mb-4">Company</h3>
-              <ul class="list-unstyled float-start links">
+          <div className='col-lg-4 ps-lg-5'>
+            <div className='widget'>
+              <h3 className='mb-4'>Company</h3>
+              <ul className='list-unstyled float-start links'>
                 <li>
-                  <a href="#">About us</a>
+                  <a href='#'>About us</a>
                 </li>
                 <li>
-                  <a href="#">Services</a>
+                  <a href='#'>Services</a>
                 </li>
                 <li>
-                  <a href="#">Vision</a>
+                  <a href='#'>Vision</a>
                 </li>
                 <li>
-                  <a href="#">Mission</a>
+                  <a href='#'>Mission</a>
                 </li>
                 <li>
-                  <a href="#">Terms</a>
+                  <a href='#'>Terms</a>
                 </li>
                 <li>
-                  <a href="#">Privacy</a>
+                  <a href='#'>Privacy</a>
                 </li>
               </ul>
-              <ul class="list-unstyled float-start links">
+              <ul className='list-unstyled float-start links'>
                 <li>
-                  <a href="#">Partners</a>
+                  <a href='#'>Partners</a>
                 </li>
                 <li>
-                  <a href="#">Business</a>
+                  <a href='#'>Business</a>
                 </li>
                 <li>
-                  <a href="#">Careers</a>
+                  <a href='#'>Careers</a>
                 </li>
                 <li>
-                  <a href="#">Blog</a>
+                  <a href='#'>Blog</a>
                 </li>
                 <li>
-                  <a href="#">FAQ</a>
+                  <a href='#'>FAQ</a>
                 </li>
                 <li>
-                  <a href="#">Creative</a>
+                  <a href='#'>Creative</a>
                 </li>
               </ul>
             </div>
             {/* <!-- /.widget --> */}
           </div>
           {/* <!-- /.col-lg-4 --> */}
-          <div class="col-lg-4">
-            <div class="widget">
-              <h3 class="mb-4">Recent Post Entry</h3>
-              <div class="post-entry-footer">
+          <div className='col-lg-4'>
+            <div className='widget'>
+              <h3 className='mb-4'>Recent Post Entry</h3>
+              <div className='post-entry-footer'>
                 <ul>
                   <li>
-                    <a href="">
+                    <a href=''>
                       <img
-                        src="./src/assets/images/img_1_sq.jpg"
-                        alt="Image placeholder"
-                        class="me-4 rounded"
+                        src='./src/assets/images/img_1_sq.jpg'
+                        alt='Image placeholder'
+                        className='me-4 rounded'
                       />
-                      <div class="text">
+                      <div className='text'>
                         <h4>
                           There’s a Cool New Way for Men to Wear Socks and
                           Sandals
                         </h4>
-                        <div class="post-meta">
-                          <span class="mr-2">March 15, 2018 </span>
+                        <div className='post-meta'>
+                          <span className='mr-2'>March 15, 2018 </span>
                         </div>
                       </div>
                     </a>
                   </li>
                   <li>
-                    <a href="">
+                    <a href=''>
                       <img
-                        src="./src/assets/images/img_2_sq.jpg"
-                        alt="Image placeholder"
-                        class="me-4 rounded"
+                        src='./src/assets/images/img_2_sq.jpg'
+                        alt='Image placeholder'
+                        className='me-4 rounded'
                       />
-                      <div class="text">
+                      <div className='text'>
                         <h4>
                           There’s a Cool New Way for Men to Wear Socks and
                           Sandals
                         </h4>
-                        <div class="post-meta">
-                          <span class="mr-2">March 15, 2018 </span>
+                        <div className='post-meta'>
+                          <span className='mr-2'>March 15, 2018 </span>
                         </div>
                       </div>
                     </a>
                   </li>
                   <li>
-                    <a href="">
+                    <a href=''>
                       <img
-                        src="./src/assets/images/img_3_sq.jpg"
-                        alt="Image placeholder"
-                        class="me-4 rounded"
+                        src='./src/assets/images/img_3_sq.jpg'
+                        alt='Image placeholder'
+                        className='me-4 rounded'
                       />
-                      <div class="text">
+                      <div className='text'>
                         <h4>
                           There’s a Cool New Way for Men to Wear Socks and
                           Sandals
                         </h4>
-                        <div class="post-meta">
-                          <span class="mr-2">March 15, 2018 </span>
+                        <div className='post-meta'>
+                          <span className='mr-2'>March 15, 2018 </span>
                         </div>
                       </div>
                     </a>
@@ -165,8 +165,8 @@ export const Footer = () => {
         </div>
         {/* <!-- /.row --> */}
 
-        <div class="row mt-2">
-          <div class="col-12 text-center">
+        <div className='row mt-2'>
+          <div className='col-12 text-center'>
             <p>Copyright &copy;. TrustCode Company</p>
           </div>
         </div>

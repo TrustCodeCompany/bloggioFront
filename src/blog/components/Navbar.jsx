@@ -1,3 +1,5 @@
+import { Link, NavLink } from 'react-router-dom';
+
 export const Navbar = () => {
   return (
     <>
@@ -34,7 +36,10 @@ export const Navbar = () => {
 
                   <ul className="js-clone-nav d-none d-lg-inline-block text-start site-menu mx-auto">
                     <li className="active">
-                      <a href="index.html">Home</a>
+                      <NavLink to="index.html">Inicio</NavLink>
+                    </li>
+                    <li>
+                      <NavLink to="about">Nosotros</NavLink>
                     </li>
                     <li className="has-children">
                       <a href="category.html">Pages</a>
@@ -79,9 +84,7 @@ export const Navbar = () => {
                         </li>
                       </ul>
                     </li>
-                    <li>
-                      <a href="category.html">Culture</a>
-                    </li>
+
                     <li>
                       <a href="category.html">Business</a>
                     </li>

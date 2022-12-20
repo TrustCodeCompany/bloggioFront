@@ -350,3 +350,7 @@ template {
   display: none;
 }
 /* ............. END NORMALIZE .................... */
+
+.isActive {
+  color: tomato !important;
+}

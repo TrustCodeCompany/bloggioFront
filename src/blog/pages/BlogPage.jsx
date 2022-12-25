@@ -1,7 +1,11 @@
 import React from 'react';
-import { Footer, Navbar } from '../components';
+import { Footer, Navbar, CardImgGradient } from '../components';
 
 export const BlogPage = () => {
+
+  let arr = ['blog','blog']
+  let index = 0;
+
   return (
     <>
       <Navbar />
@@ -10,19 +14,26 @@ export const BlogPage = () => {
       <section className="section bg-light">
         <div className="container">
           <div className="row align-items-stretch retro-layout">
-            <div className="col-md-4">
-              <a href="single.html" className="h-entry mb-30 v-height gradient">
-                <div
-                  className="featured-img"
-                  style={{
-                    backgroundImage: `url('./src/assets/images/img_2_horizontal.jpg')`,
-                  }}></div>
-
-                <div className="text">
-                  <span className="date">Apr. 14th, 2022</span>
-                  <h2>AI can now kill those annoying cookie pop-ups</h2>
-                </div>
-              </a>
+          <div className="col-md-4">
+            {
+              arr.map(e => {         
+                return <CardImgGradient 
+                      imgPath={'./src/assets/images/img_5_horizontal.jpg'}
+                      url={'single.html'}
+                      date={'Apr. 14th, 2022'}
+                      title={'Don’t assume your user data in the cloud is safe'}
+                      nameClass={'h-entry mb-30 v-height gradient'} />
+              })                                                                                     
+            }
+          </div> 
+            
+            {/*<div className="col-md-4">
+              <CardImgGradient 
+              imgPath={'./src/assets/images/img_5_horizontal.jpg'}
+              url={'single.html'}
+              date={'Apr. 14th, 2022'}
+              title={'Don’t assume your user data in the cloud is safe'}
+              nameClass={'h-entry mb-30 v-height gradient'} />
               <a href="single.html" className="h-entry v-height gradient">
                 <div
                   className="featured-img"
@@ -35,7 +46,8 @@ export const BlogPage = () => {
                   <h2>Don’t assume your user data in the cloud is safe</h2>
                 </div>
               </a>
-            </div>
+            </div>*/}
+            {/*
             <div className="col-md-4">
               <a href="single.html" className="h-entry img-5 h-100 gradient">
                 <div
@@ -76,6 +88,7 @@ export const BlogPage = () => {
                 </div>
               </a>
             </div>
+                */}
           </div>
         </div>
       </section>

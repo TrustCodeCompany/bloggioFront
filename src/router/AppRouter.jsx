@@ -11,7 +11,7 @@ const AppRouter = () => {
       {/* Login y Registro */}
       <Route path="/auth/*" element={<AuthRoutes />} />
 
-      {/* JournalApp */}
+      
       <Route path="/*" element={<BlogRoutes />} />
     </Routes>
   );

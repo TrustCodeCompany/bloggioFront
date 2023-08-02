@@ -1,0 +1,22 @@
+.avatar {
+
+  &__container {
+    display: flex;
+    align-items: center;
+    margin-right: 100px;
+  }
+
+  &__text {
+    color: white;
+  }
+
+  &__container-img {
+    margin-left: 20px;
+  }
+
+  &__img {
+    max-width: 54px;
+    border-radius: 50%;
+  }
+
+}

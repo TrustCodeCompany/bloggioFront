@@ -1,13 +1,31 @@
-import React from 'react';
 import { Footer, Navbar } from '../components';
+import { SearchBar } from '../components';
+import { useState } from 'react';
 
 export const BlogPage = () => {
+
+
+  const [posts, setPosts] = useState([]); // array de objetos que representan los posts del blog
+  const [filteredPosts, setFilteredPosts] = useState(posts);
+
+
   return (
     <>
       <Navbar />
 
+      <SearchBar posts={posts} setFilteredPosts={setFilteredPosts} />
+      {filteredPosts.map((post) => (
+        <div key={post.id}>
+          <h2>{post.title}</h2>
+          <p>{post.content}</p>
+        </div>
+      ))}
+
+
+      <h1>Home Page</h1>
+
       {/* <!-- Start retroy layout blog posts --> */}
-      <section className="section bg-light">
+      {/* <section className="section bg-light">
         <div className="container">
           <div className="row align-items-stretch retro-layout">
             <div className="col-md-4">
@@ -78,11 +96,11 @@ export const BlogPage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/* <!-- End retroy layout blog posts --> */}
 
       {/* <!-- Start posts-entry --> */}
-      <section className="section posts-entry">
+      {/* <section className="section posts-entry">
         <div className="container">
           <div className="row mb-4">
             <div className="col-sm-6">
@@ -214,11 +232,11 @@ export const BlogPage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/* <!-- End posts-entry --> */}
 
       {/* <!-- Start posts-entry --> */}
-      <section className="section posts-entry posts-entry-sm bg-light">
+      {/* <section className="section posts-entry posts-entry-sm bg-light">
         <div className="container">
           <div className="row">
             <div className="col-md-6 col-lg-3">
@@ -315,11 +333,11 @@ export const BlogPage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/* <!-- End posts-entry --> */}
 
       {/* <!-- Start posts-entry --> */}
-      <section className="section posts-entry">
+      {/* <section className="section posts-entry">
         <div className="container">
           <div className="row mb-4">
             <div className="col-sm-6">
@@ -451,11 +469,11 @@ export const BlogPage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/* End Post Entry */}
 
       {/* Start post-entry */}
-      <section className="section">
+      {/* <section className="section">
         <div className="container">
           <div className="row mb-4">
             <div className="col-sm-6">
@@ -859,11 +877,11 @@ export const BlogPage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/* End post-entry */}
 
       {/* Start post-entry */}
-      <div className="section bg-light">
+      {/* <div className="section bg-light">
         <div className="container">
           <div className="row mb-4">
             <div className="col-sm-6">
@@ -937,11 +955,11 @@ export const BlogPage = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       {/* End post-entry */}
 
       {/* Start Footer */}
-      <Footer />
+      {/* <Footer /> */}
       {/* End Footer */}
     </>
   );

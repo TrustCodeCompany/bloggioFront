@@ -1,0 +1,17 @@
+$font-title : 'Montserrat';
+$font-text : 'Lato';
+
+html {
+  font-family: $font-text;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+}
+
+p {
+  // font-weight: 300;
+}

@@ -1,120 +1,93 @@
+import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { Avatar } from './Avatar';
 
 export const Navbar = () => {
+
+  // inicio datos del usuario que se logueo
+  const user = {
+    name: 'Fernando',
+    // avatar: 'https://example.com/avatar.jpg',
+    avatar: 'https://yt3.googleusercontent.com/vRF8BHREiJ3Y16AbMxEi_oEuoQlnNNqGpgULuZ6zrWSAi24HcxX3Vko42RN8ToctH-G0qlWd=s176-c-k-c0x00ffffff-no-rj',
+  };
+  // fin datos del usuario que se logueo
+
+  const [click, setClick] = useState(false);
+
+  const handleClick = () => setClick(!click);
+
   return (
     <>
-      <div className="site-mobile-menu site-navbar-target">
-        <div className="site-mobile-menu-header">
-          <div className="site-mobile-menu-close">
-            <span className="icofont-close js-menu-toggle"></span>
+      
+      <nav className="navbar">
+        <div className="nav-container">
+
+          <NavLink to="/" className="nav-logo">
+            Bloggio
+            <i className="fas fa-code"></i>
+          </NavLink>
+
+          <ul className={click ? "nav-menu active" : "nav-menu"}>
+            <li className="nav-item">
+              <NavLink
+                to="/"
+                // activeClassName="active"
+                className="nav-links"
+                onClick={handleClick}
+              >
+                Inicio
+              </NavLink>
+            </li>
+
+            <li className="nav-item">
+              <NavLink
+                to="/categories"
+                // activeClassName="active"
+                className="nav-links"
+                onClick={handleClick}
+              >
+                Categorias
+              </NavLink>
+            </li>
+
+            <li className="nav-item">
+              <NavLink
+                to="/about"
+                // activeClassName="active"
+                className="nav-links"
+                onClick={handleClick}
+              >
+                Nosotros
+              </NavLink>
+            </li>
+            
+            {/* <li className="nav-item">
+              <NavLink
+                exact
+                to="/contact"
+                // activeClassName="active"
+                className="nav-links"
+                onClick={handleClick}
+              >
+                Contactanos
+              </NavLink>
+            </li> */}
+          </ul>
+          
+          <div className="avatar__container">
+              <p className='avatar__text'>Bienvenido, {user.name}</p>
+              <Avatar user={user} />
           </div>
-        </div>
-        <div className="site-mobile-menu-body"></div>
-      </div>
+          
+         
 
-      <nav className="site-nav">
-        <div className="container">
-          <div className="menu-bg-wrap">
-            <div className="site-navigation">
-              <div className="row g-0 align-items-center">
-                <div className="col-2">
-                  <a href="index.html" className="logo m-0 float-start">
-                    Bloggio
-                  </a>
-                </div>
-                <div className="col-8 text-center">
-                  <form
-                    action="#"
-                    className="search-form d-inline-block d-lg-none">
-                    <input
-                      type="text"
-                      className="form-control"
-                      placeholder="Search..."
-                    />
-                    <span className="bi-search"></span>
-                  </form>
-
-                  <ul className="js-clone-nav d-none d-lg-inline-block text-start site-menu mx-auto">
-                    <li className="active">
-                      <NavLink to="index.html">Inicio</NavLink>
-                    </li>
-                    <li>
-                      <NavLink to="about">Nosotros</NavLink>
-                    </li>
-                    <li className="has-children">
-                      <a href="category.html">Pages</a>
-                      <ul className="dropdown">
-                        <li>
-                          <a href="blog.html">Search Result</a>
-                        </li>
-                        <li>
-                          <a href="blog.html">Blog</a>
-                        </li>
-                        <li>
-                          <a href="single.html">Blog Single</a>
-                        </li>
-                        <li>
-                          <a href="category.html">Category</a>
-                        </li>
-                        <li>
-                          <a href="about.html">About</a>
-                        </li>
-                        <li>
-                          <a href="contact.html">Contact Us</a>
-                        </li>
-                        <li>
-                          <a href="#">Menu One</a>
-                        </li>
-                        <li>
-                          <a href="#">Menu Two</a>
-                        </li>
-                        <li className="has-children">
-                          <a href="#">Dropdown</a>
-                          <ul className="dropdown">
-                            <li>
-                              <a href="#">Sub Menu One</a>
-                            </li>
-                            <li>
-                              <a href="#">Sub Menu Two</a>
-                            </li>
-                            <li>
-                              <a href="#">Sub Menu Three</a>
-                            </li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </li>
-
-                    <li>
-                      <a href="category.html">Business</a>
-                    </li>
-                    <li>
-                      <a href="category.html">Politics</a>
-                    </li>
-                  </ul>
-                </div>
-                <div className="col-2 text-end">
-                  <a
-                    href="#"
-                    className="burger ms-auto float-end site-menu-toggle js-menu-toggle d-inline-block d-lg-none light">
-                    <span></span>
-                  </a>
-                  <form
-                    action="#"
-                    className="search-form d-none d-lg-inline-block">
-                    <input
-                      type="text"
-                      className="form-control"
-                      placeholder="Search..."
-                    />
-                    <span className="bi-search"></span>
-                  </form>
-                </div>
-              </div>
-            </div>
+          <div className="nav-icon" onClick={handleClick}>
+            <i className={click ? "fas fa-times" : "fas fa-bars"}></i>
           </div>
+
         </div>
       </nav>
+
     </>
   );
 };
